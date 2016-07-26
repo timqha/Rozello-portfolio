@@ -1,0 +1,12 @@
+node_modules
+dist
+.tmp
+.sass-cache
+app/bower_components
+test/bower_components
+.idea
+*.zip
+build/
+dist/
+/app/styles/*.css
+/app/styles/*.css.map

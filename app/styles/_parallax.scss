@@ -1,0 +1,33 @@
+.header-intro {
+
+    .inner-container {
+        width: 100%;
+    }
+
+    .parallax1 {
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .parallax-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2500px;
+        height: 100vh;
+    }
+
+    .parallax-layer-1 {
+        transition: ease-out 0.2s;
+    }
+
+    .parallax-layer-2 {
+        transition: ease-out 0.3s;
+    }
+
+    .parallax-layer-3 {
+        transition: ease-out 0.7s;
+    }
+}

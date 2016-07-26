@@ -1,0 +1,57 @@
+
+.col-2 {
+    width: calc(20% - 16px);
+}
+
+.col-3 {
+    width: calc(30% - 16px);
+}
+
+.col-4 {
+    width: calc(40% - 32px);
+}
+
+.col-5 {
+    width: calc(50% - 16px);
+}
+
+.col-6 {
+    width: calc(60% - 16px);
+}
+
+.col-7 {
+    width: calc(70% - 16px);
+}
+
+.col-8 {
+    width: calc(80% - 16px);
+}
+
+.col-10 {
+    width: calc(100% - 16px);
+}
+
+.col-11 {
+    width: calc(100%);
+}
+
+.col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-10, .col-11 {
+    margin: 0 8px;
+    display: inline-block;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+}
+
+.col-left {
+    align-self: flex-end;
+}
+
+.col-right {
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.col-center {
+    align-self: center;
+}

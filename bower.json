@@ -1,0 +1,10 @@
+{
+  "name": "rozello",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.0",
+    "waypoints": "^4.0.0",
+    "gsap": "^1.19.0"
+  },
+  "devDependencies": {}
+}

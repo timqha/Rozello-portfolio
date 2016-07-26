@@ -1,0 +1,33 @@
+@import 'public-api';
+
+$lato-font-path: '/fonts/lato';
+
+@include lato-include-font('black');
+@include lato-include-font('medium');
+
+//h1 {
+//    @include lato-font('black');
+//}
+//
+//p.quote {
+//    @include lato-font('medium', italic);
+//}
+
+@font-face {
+    font-family: Exo2-Black;
+    src: url("/fonts/ex2/Exo2-Black.eot");
+    src: url("/fonts/ex2/Exo2-Black.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/ex2/Exo2-Black.woff") format("woff"),
+    url("/fonts/ex2/Exo2-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: Exo2-Regular;
+    src: url("/fonts/ex2/Exo2-Regular.eot");
+    src: url("/fonts/ex2/Exo2-Regular.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/ex2/Exo2-Regular.woff") format("woff"),
+    url("/fonts/ex2/Exo2-Regular.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}

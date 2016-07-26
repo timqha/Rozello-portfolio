@@ -1,0 +1,138 @@
+.logo {
+    width: 250px;
+    height: 46px;
+    position: fixed;
+    top: 32px;
+    left: 32px;
+    cursor: pointer;
+    z-index: 80;
+    opacity: 0;
+    transform: translate(0, -20px);
+    color: $top-grey-color;
+}
+
+.logo-icon {
+    width: 54px;
+    min-height: 67px;
+    position: relative;
+    top: -15px;
+    background: url("../images/logo.png") no-repeat;
+    display: inline-block;
+}
+
+.logo-type {
+    height: 36px;
+    position: relative;
+    top: -35px;
+    font-family: 'Exo2-Black', Helvetica, Arial, sans-serif ;
+    font-weight: 900;
+    font-size: 1.5em;
+    display: inline-block;
+}
+
+.hamburger-menu {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    padding: 15px 8px;
+    top: 32px;
+    right: 32px;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    transform: translate(0, -20px);
+
+    &:hover .hamburger:before {
+        transform: translate(0, -1px);
+        transition: all ease-in-out 0.3s;
+    }
+
+    &:hover .hamburger:after {
+        transform: translate(0, 1px);
+        transition: all ease-in-out 0.3s;
+    }
+}
+
+.hamburger {
+    width: 24px;
+    height: 10px;
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 24px;
+        height: 2px;
+        background: $top-grey-color;;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all ease-in-out 0.3s;
+    }
+
+    &:after {
+        content: '';
+        width: 24px;
+        height: 2px;
+        background: $top-grey-color;;
+        position: absolute;
+        top: 8px;
+        left: 0;
+        transition: all ease-in-out 0.3s;
+    }
+}
+
+.request {
+    position: fixed;
+    padding: 24px 0;
+    margin: 0 24px;
+    top: 24px;
+    right: 80px;
+    font-size: 0.786em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    z-index: 80;
+    opacity: 0;
+    transform: translate(0, -20px);
+    font-family: 'Lato Medium', $font-stack;
+    color: $top-grey-color;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 14px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 1px;
+        width: 0%;
+        opacity: 0;
+        transition: all ease-in 0.3s;
+        background: $yellow-base-color;
+        background: linear-gradient(to right, #02ccff 0%, $yellow-base-color 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$first-color, endColorstr=$second-color, GradientType=1);
+    }
+
+    &:hover:after {
+        width: 100%;
+        opacity: 1;
+        transition: all ease-out 0.3s;
+    }
+}
+
+.menu-light {
+    .request {
+        color: #fff;
+    }
+
+    .hamburger:before,
+    .hamburger:after {
+        background: #fff;
+    }
+
+    .lower-type,
+    .upper-type {
+        color: rgba(0, 0, 0, 0.1);
+    }
+}
