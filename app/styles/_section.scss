@@ -41,3 +41,38 @@
     height: 80px;
     display: none;
 }
+
+// section about-us: start
+.sem-colon {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.item {
+    text-align: center;
+    width: 33.33%;
+    min-height: 400px;
+    color: $top-grey-color;
+    img {
+        width: 65%;
+        height: auto;
+    }
+    .caption {
+        margin: 0.9em 0;
+        font-family: "Lato", $font-stack;
+        font-weight: 900;
+        font-size: 2em;
+    }
+    .label {
+        font-family: "Lato Medium", $font-stack;
+        font-weight: 400;
+        font-size: 0.6em;
+    }
+}
+// section about-us: end
+
+

@@ -1,7 +1,7 @@
 #PORTFOLIO ROZELLO-TEAM
 
 ##DEMO
-    Rozello-team.ltd.ua
+    [I'm a DEMO, click me!] (http://Rozello-team.ltd.ua)
 
 ##Installation:
     

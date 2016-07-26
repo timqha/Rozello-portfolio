@@ -4,6 +4,8 @@ $lato-font-path: '/fonts/lato';
 
 @include lato-include-font('black');
 @include lato-include-font('medium');
+@include lato-include-font('light');
+@include lato-include-font('bold');
 
 //h1 {
 //    @include lato-font('black');
