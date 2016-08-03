@@ -23,7 +23,7 @@ var slidColors = {};
 //
 slidColors.slide1 = {right: "#e9e9e9", left: "#e9e9e9"};
 slidColors.slide2 = {right: "#f9f4d9", left: "#f9f4d9"};
-slidColors.slide3 = {right: "#242424", left: "#242424"};
+slidColors.slide3 = {right: "#383838", left: "#383838"};
 slidColors.slide4 = {right: "#e9f9f3", left: "#e9f9f3"};
 slidColors.slide5 = {right: "#e9e9e9", left: "#e9e9e9"};
 
@@ -51,7 +51,7 @@ window.onunload = function() {
         // currentDelay = 500;
             currentDelay = 0;
 
-        // reurn interval for delay.
+        // return interval for delay.
         function intervalDelay() {
             return currentDelay;
         }
@@ -323,5 +323,5 @@ window.onunload = function() {
                 return t.staggerTo("#contacts .js-fadeIn", .8, {opacity: 1, y: 0}, .1, "-=0.3")
             }
         };
-
+        
     });
