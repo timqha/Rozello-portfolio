@@ -4,7 +4,6 @@
     }
 }
 
-
 @media all and (min-width: 640px) and (max-width: 1280px) {
     .headline-big {
         font-size: 4em
@@ -20,7 +19,8 @@
     .headline {
         font-size: 1.5em;
         line-height: 1.5em;
-        margin-bottom: 24px
+        margin-bottom: 24px;
+        text-align: justify;
     }
 
     .subheadline {
@@ -104,13 +104,6 @@
         transform: none
     }
 
-    #about-us {
-        background: #252525
-    }
-
-    #portfolio {
-        background: #F2F2F2
-    }
 }
 
 @media all and (max-width: 640px) {
@@ -123,13 +116,6 @@
         height: auto
     }
 
-    #about-us {
-        background: #252525
-    }
-
-    #portfolio {
-        background: #F2F2F2
-    }
 }
 
 @media all and (min-width: 640px) and (max-width: 780px) {
@@ -249,6 +235,88 @@
 
     .hamburger-menu {
         top: 16px;
-        right: 16px
+        right: 16px;
     }
 }
+
+// we provide : start
+@media all and (min-width: 560px) and (max-width: 1325px) {
+    .services .item {
+        width: 40%;
+    }
+    .services .desc {
+        white-space: normal;
+    }
+}
+
+@media all and (max-width: 782px) {
+    #we-provide .item-4 {
+        width: 25%;
+    }
+}
+
+@media all and (max-width: 559px) {
+    .services .item {
+        width: 70%;
+    }
+
+    #we-provide {
+        .col-iphone {
+            width: 70%;
+        }
+        .sem-colon.flex-baseline.js-fadeIn {
+            display: none;
+        }
+    }
+    .services .desc {
+        white-space: normal;
+    }
+
+}
+
+// we provide : end
+
+// about-us: start
+
+@media all and (max-width: 768px) {
+    .about-us {
+        .item {
+            width: 50%;
+        }
+    }
+}
+
+@media all and (max-width: 480px) {
+    .about-us {
+        .item {
+            width: 70%;
+        }
+    }
+}
+
+// about-us: end
+
+// contacts: start
+@media all and (max-width: 780px) {
+    #contacts .mail {
+        display: none;
+    }
+
+    #contacts {
+        .item, form {
+            width: 100%;
+        }
+    }
+}
+
+@media all and (max-width: 480px) {
+    #contacts {
+        .item-contact {
+            input[type=text], input[type=email], .contact-input ~ label {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// contacts: end

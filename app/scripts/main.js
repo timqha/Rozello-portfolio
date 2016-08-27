@@ -14,6 +14,13 @@ if (currentBuild !== versionBuild.DEV) {
     });
 }
 
+// TODO create mail
+// TODO fix rozello for mobile
+// TODO projects
+// TODO fix this file to.
+// TODO delete info for dev
+// TODO add Google analytics
+
 var slidColors = {};
 // slidColors.slide1 = {right: "#e9e9e9", left: "#e9e9e9"};
 // slidColors.slide2 = {right: "#fff", left: "#f4ecbd"};
@@ -28,7 +35,9 @@ slidColors.slide4 = {right: "#e9f9f3", left: "#e9f9f3"};
 slidColors.slide5 = {right: "#e9e9e9", left: "#e9e9e9"};
 
 window.onunload = function() {
-    //window.scrollTo(0, 0);
+    if (currentBuild !== versionBuild.DEV) {
+        window.scrollTo(0, 0);
+    }
 },
     /* jshint ignore:start */
     window.mobilecheck = function() {
@@ -47,9 +56,12 @@ window.onunload = function() {
             bgTextL = $('.lower-type'),
             bgTextU = $('.upper-type'),
             backgroundText = (parseInt($('.lower-type').css("font-size")), ["", "About us", "WE PROVIDE", "PORTFOLIO", "CONTACTS"]),
-            counter = 0,
-        // currentDelay = 500;
-            currentDelay = 0;
+            counter = 0;
+            if (currentBuild !== versionBuild.DEV) {
+               var currentDelay = 500;
+            } else {
+               var currentDelay = 0;
+            }
 
         // return interval for delay.
         function intervalDelay() {
@@ -77,8 +89,11 @@ window.onunload = function() {
 
         // change number 1 to 100 end start events.
         function loadingStart() {
-            // loadDivider(counter), 99 >= counter ? counter++ : 100 === counter && events();
-            events();
+            if (currentBuild !== versionBuild.DEV) {
+                loadDivider(counter), 99 >= counter ? counter++ : 100 === counter && events();
+            } else {
+                events();
+            }
         }
 
         function timer() {
@@ -127,6 +142,7 @@ window.onunload = function() {
                     "up" === t && (
                         //$("body").removeClass("menu-light"),
                         // T.backgroundChanger("#00ff00"),
+                        TweenMax.to($('.logo-type'), 0.6, {opacity: 1}),
                         T.backgroundChangerGradient(slidColors.slide1),
                         T.reIntro(),
                         T.sidebar(0, 0.1),
@@ -141,6 +157,7 @@ window.onunload = function() {
                         "down" === t && (
                             //$("body").addClass("menu-light"),
                             $("body").removeClass("menu-light"),
+                            TweenMax.to($('.logo-type'), 0.6, {opacity: 0}),
                             // T.backgroundChanger("#ff0000"),
                             T.backgroundChangerGradient(slidColors.slide2),
                             T.sidebar(1, 0.1),
@@ -233,7 +250,8 @@ window.onunload = function() {
         var T = {
             intro: function() {
                 var t = new TimelineMax;
-                t.to(".logo", 0.3, {opacity: 1, y: 0}).to(".request", 0.3, {opacity: 1, y: 0})
+                t.to(".logo", 0.3, {opacity: 1, y: 0})
+                .to(".request", 0.3, {opacity: 1, y: 0})
                 .to(".hamburger-menu", 0.3, {opacity: 1, y: 0}, "-= 0.3")
                 .staggerTo("#header-intro .js-fadeIn", 0.6, {opacity: 1, y: 0}, 0.1, "sync")
                 .to($(".copyright"), 0.3, {opacity: 1, y: 0}, "sync")
@@ -323,5 +341,19 @@ window.onunload = function() {
                 return t.staggerTo("#contacts .js-fadeIn", .8, {opacity: 1, y: 0}, .1, "-=0.3")
             }
         };
-        
+
+        var element = $('.contact-input');
+
+        element.on('keydown keyup focus blur', function() {
+            if($(this).val() != '') {
+                $(this).addClass('input-select');
+            } else{
+                $(this).removeClass('input-select');
+            }
+        });
+
+        element.on('keyup blur', function() {
+            $(this).addClass('idirty');
+        });
+
     });

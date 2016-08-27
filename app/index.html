@@ -124,29 +124,41 @@
                     <div class="sem-colon services ">
                         <div class="item dark copy js-fadeIn"><img src="images/we-1.png" alt="">
                             <div class="desc">User Interface & User Experience</div>
-                            <div class="describe">Every aspect of client traffic and usage is important. We create clear pathways to your site and simple traffic patterns within it.</div>
+                            <div class="describe">Every aspect of client traffic and usage is important. We create clear
+                                pathways to your site and simple traffic patterns within it.
+                            </div>
                         </div>
                         <div class="item dark copy js-fadeIn">
                             <div class="item-dark"></div>
                             <img src="images/we-2.png" alt="">
                             <div class="desc">Responsive Design</div>
-                            <div class="describe">We designs let your business shine on every screen. No matter what device is used, your site will run smoothly and appear correctly.</div>
+                            <div class="describe">We designs let your business shine on every screen. No matter what
+                                device is used, your site will run smoothly and appear correctly.
+                            </div>
                         </div>
                         <div class="item dark copy js-fadeIn"><img src="images/we-3.png" alt="">
                             <div class="desc">Quick Page Load Time</div>
-                            <div class="describe">Visitors and search engines love a website because we focus on designs that are quick and easy to load.</div>
+                            <div class="describe">Visitors and search engines love a website because we focus on designs
+                                that are quick and easy to load.
+                            </div>
                         </div>
                         <div class="item dark copy js-fadeIn"><img src="images/we-4.png" alt="">
                             <div class="desc">B2B Specific Elements</div>
-                            <div class="describe">B2B websites are uniques specialized knowledge. we have a prercord for making websites valuable resources lead generators.</div>
+                            <div class="describe">B2B websites are uniques specialized knowledge. we have a prercord for
+                                making websites valuable resources lead generators.
+                            </div>
                         </div>
                         <div class="item dark copy js-fadeIn"><img src="images/we-5.png" alt="">
                             <div class="desc">Website Flow</div>
-                            <div class="describe">Websites are designed to enhance your customer’s experience by using clear, intuitive purchasing processes.</div>
+                            <div class="describe">Websites are designed to enhance your customer’s experience by using
+                                clear, intuitive purchasing processes.
+                            </div>
                         </div>
                         <div class="item dark copy js-fadeIn"><img src="images/we-6.png" alt="">
                             <div class="desc">Easy Navigation</div>
-                            <div class="describe">Ease of use helps any website increase sales. Designs focus on creating easy navigation and flow between different products and categories.</div>
+                            <div class="describe">Ease of use helps any website increase sales. Designs focus on
+                                creating easy navigation and flow between different products and categories.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -218,14 +230,46 @@
                     <h2 class="headline js-fadeIn">Feel free to contact us whenever you want. Your opinion
                         is important for us :)</h2>
                     <div class="sem-colon">
-                        <div class="item">
+                        <div class="item mail js-fadeIn">
                             <img src="images/mail.png" alt="mail">
                         </div>
-                        <div class="item item-contact">
+                        <div class="item item-contact js-fadeIn">
                             <form action="">
-                                <input type="text" placeholder="Name">
-                                <input type="text" placeholder="E-mail">
-                                <textarea id="message" name="message" placeholder="Messsage"></textarea>
+
+                                <div class="group">
+                                    <input class="contact-input input-floating" type="text" required />
+                                    <label>Name</label>
+                                    <span class="error-message">Name is required!</span>
+                                </div>
+                                <div class="group">
+                                    <input class="contact-input input-floating" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required />
+                                    <label>E-mail</label>
+                                    <span class="error-message">This is not a valid email address!</span>
+                                </div>
+
+                                <div class="group">
+                                    <textarea class="contact-input input-floating" rows= "3" required></textarea>
+                                    <label class="message">Text</label>
+                                    <span class="error-message">Message is required!</span>
+                                </div>
+
+                                <!--<div class="group">-->
+                                    <!--<input id="input-name" type="text" required>-->
+                                    <!--<span class="bar"></span>-->
+                                    <!--<label for="input-name">Name</label>-->
+                                <!--</div>-->
+
+                                <!--<div class="group">-->
+                                    <!--<input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>-->
+                                    <!--<span class="bar"></span>-->
+                                    <!--<label for="email">E-mail</label>-->
+                                <!--</div>-->
+                                <!--<div class="group">-->
+                                    <!--<textarea id="message" name="message" required></textarea>-->
+                                    <!--<span class="bar"></span>-->
+                                    <!--<label for="message">Messsage</label>-->
+                                <!--</div>-->
+
                                 <button type="submit">SEND</button>
                             </form>
                         </div>
