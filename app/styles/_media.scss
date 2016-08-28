@@ -320,3 +320,39 @@
 }
 
 // contacts: end
+
+
+// portfolio: start
+@media all and (max-width: 1224px){
+    #portfolio .item{
+        width: 46%;
+    }
+}
+
+@media all and (max-width: 990px){
+    #portfolio .item{
+        width: 46%;
+        .caption{
+            font-size: 1.5em;
+            top: 6.5em;
+        }
+        .describe {
+            font-size: 0.8em;
+            top: 16em;
+        }
+    }
+}
+
+@media all and (max-width: 700px){
+    #portfolio .item{
+        width: 100%;
+        .caption{
+            font-size: 1.2em;
+            top: 10em;
+        }
+        .describe {
+            display: none;
+        }
+    }
+}
+// portfolio: end

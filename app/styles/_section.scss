@@ -80,41 +80,57 @@
 
 .project {
     position: relative;
+    width: 100%;
 
     img {
         width: 85%;
     }
 
-    img, img.blur, .caption, .describe {
+    img, img.blur, .caption, .describe, .bl {
         position: absolute;
         left: 0;
         top: 0;
     }
 
-    img.blur {
-        top: 5.3em;
-        opacity: 0.3;
+    .bl{
+        background-color: #e9f9f3;
+        background: linear-gradient(to bottom, transparent 0%, transparent 40%, rgba(0,0,0,1) 100%);
+        width: calc(100% - 15%);
         z-index: 10;
+        opacity: 0.7;
+        height: 15em;
     }
 
+    //img.blur {
+    //    top: 5.3em;
+    //    opacity: 0.3;
+    //    z-index: 10;
+    //}
+
     .caption, .describe {
+        //text-shadow: 4px 3px 10px rgb(0, 0, 0);
+        text-shadow: 2px 4px 13px rgb(0, 0, 0);
         left: 1em;
         color: #fff;
         z-index: 12;
-        top: 5em;
+        top: 4.5em;
     }
 
     .describe {
         left: 2em;
-        top: 15em;
+        top: 13em;
     }
 
 }
 
-#portfolio .item {
-    min-height: 200px;
-    padding-bottom: 15em;
-    padding-top: 5em;
+#portfolio {
+    .item {
+        min-height: 200px;
+        padding-bottom: 15em;
+        padding-top: 5em;
+        overflow: hidden;
+    }
+
 }
 
 // section portfolio: end
