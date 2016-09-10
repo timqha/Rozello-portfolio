@@ -6,7 +6,7 @@ var versionBuild = {
     PRO: {value: 2, name: "Production"}
 };
 
-var currentBuild = versionBuild.DEV;
+var currentBuild = versionBuild.PRO;
 
 if (currentBuild !== versionBuild.DEV) {
     $(document).ready(function() {
@@ -137,7 +137,6 @@ window.onunload = function() {
             new Waypoint({
                 element: document.getElementById("header-intro"),
                 handler: function(t) {
-                    console.log(t, "eader-intro");
 
                     "up" === t && (
                         //$("body").removeClass("menu-light"),
@@ -153,7 +152,6 @@ window.onunload = function() {
             }),
                 new Waypoint({
                     element: document.getElementById("about-us"), handler: function(t) {
-                        console.log(t, "about-us");
                         "down" === t && (
                             //$("body").addClass("menu-light"),
                             $("body").removeClass("menu-light"),
@@ -167,7 +165,6 @@ window.onunload = function() {
                 }),
                 new Waypoint({
                     element: document.getElementById("about-us"), handler: function(t) {
-                        console.log(t, "about-us");
                         "up" === t && (
                             //$("body").addClass("menu-light"),
                             $("body").removeClass("menu-light"),
@@ -182,7 +179,6 @@ window.onunload = function() {
                 }),
                 new Waypoint({
                     element: document.getElementById("we-provide"), handler: function(t) {
-                        console.log(t, "we-provide");
                         "down" === t && (
                             $("body").addClass("menu-light"),
                             // T.backgroundChanger("#0000ff"),
@@ -194,7 +190,6 @@ window.onunload = function() {
                 }),
                 new Waypoint({
                     element: document.getElementById("we-provide"), handler: function(t) {
-                        console.log(t, "we-provide");
                         "up" === t && (
                             $("body").addClass("menu-light"),
                             // T.backgroundChanger("#0000ff"),
